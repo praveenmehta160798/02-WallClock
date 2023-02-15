@@ -38,14 +38,17 @@ let hourStick = document.querySelector('.hour-stick');
 let minuteStick = document.querySelector('.minute-stick');
 let secondStick = document.querySelector('.second-stick');
 
+
 setInterval(() => {
     let d = new Date();
+    let hourHandAddDeg = (d.getMinutes() / 60) * 30;
+    hourStick.style.transform = `rotate(${(d.getHours() * 30) + hourHandAddDeg}deg)`;
 
-    hourStick.style.transform = `rotate(${(d.getHours() * 30) + 360 / d.getMinutes}deg)`;
     minuteStick.style.transform = `rotate(${d.getMinutes() * 6}deg)`;
     secondStick.style.transform = `rotate(${d.getSeconds() * 6}deg)`;
-
+    
     console.clear();
+    // console.log(hourHandAddDeg);
     console.log(`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`)
 }, 1000);
 

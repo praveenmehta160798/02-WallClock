@@ -11,7 +11,8 @@
 .wall{
     width: 100vw;
     height: 100vh;
-    background-color: pink;
+    background: url(wall.jpg) center center;
+    background-size: contain;
 }
 .clock-outer{
     width: 300px;
@@ -51,7 +52,7 @@
     top: -25px;
 
     transform-origin: center 100px;
-    transform: rotate(6deg);
+    transform: rotate(0deg);
 }
 
 .second-stick::after{
@@ -73,7 +74,7 @@
     left: 4px;
 
     transform-origin: center 105px;
-    transform: rotate(120deg);
+    transform: rotate(0deg);
 }
 
 /* .minute-stick::after{
@@ -95,7 +96,7 @@
     left: -4px;
 
     transform-origin: center 75px;
-    transform: rotate(60deg);
+    transform: rotate(0deg);
 }
 
 /* .hour-stick::after{
